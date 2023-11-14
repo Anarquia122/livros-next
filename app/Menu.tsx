@@ -1,17 +1,25 @@
 import Link from "next/link";
+import LivroLista from "./catalogo/LivroLista";
+import LivroDados from "./novo/LivroDados";
 
 export const Menu: React.FC = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <a href="/home" className="nav-link">Home</a>
+                    <Link href='/' legacyBehavior>
+                    <a className="nav-link">Home</a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/livroLista" className="nav-link">Catálogo</a>
+                    <Link href='/catalogo' legacyBehavior>
+                    <a className="nav-link">Catálogo</a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/livroDados" className="nav-link">Novo</a>
+                    <Link href='/novo' legacyBehavior>
+                    <a href="/novo" className="nav-link">Novo</a>
+                    </Link>
                 </li>
             </ul>
         </nav>

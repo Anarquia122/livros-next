@@ -18,12 +18,12 @@ export const LinhaLivro: React.FC<LinhaLivroProps> = (props) => {
 
     return (
         <tr>
-            <td>
-                <button onClick={() => props.excluir(props.livro.codigo)}>Excluir</button>
+            <td className="titulo">
+                {props.livro.titulo}
+                <button className="excluir" onClick={() => props.excluir(props.livro.codigo)}>Excluir</button>
             </td>
-            <td>{props.livro.codigo}</td>
-            <td>{props.livro.titulo}</td>
-            <td>{props.livro.resumo}</td>
+            <td className="resumo">{props.livro.resumo}</td>
+            <td>{nomeEditora}</td>
             <td>
                 <ul>
                     {props.livro.autores.map((autor: string, index: number) => (
@@ -31,7 +31,6 @@ export const LinhaLivro: React.FC<LinhaLivroProps> = (props) => {
                     ))}
                 </ul>
             </td>
-            <td>{nomeEditora}</td>
         </tr>
     );
 };
