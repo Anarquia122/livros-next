@@ -35,7 +35,7 @@ class Livro {
     }
 
     getResumo(): string {
-        return this.titulo;
+        return this.resumo;
     }
     setResumo(resumo: string): void {
         this.resumo = resumo;
